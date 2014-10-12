@@ -7,7 +7,7 @@ function Calculator () {
                     return ([
                         /*64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 84, 85, 87, 141, */ // bingo upgrades
                         85, // Revoke Elder Covenant
-                        129, 130, 131, 132, 133, // heavenly chips
+                        /*129, 130, 131, 132, 133,*/ // heavenly chips
                         182, 183, 184, 185 // season switchers
                     ].indexOf(e.id) < 0);
                 });
@@ -75,15 +75,15 @@ function Controller () {
         timeouts: { },
 
         guard:   { delay: 1000, func: this.guard.bind(this) },
-        autobuy: { delay:   50, func: this.autobuy.bind(this) },
+        autobuy: { delay:   25, func: this.autobuy.bind(this) },
         oneshot: { delay:    0, func: this.autobuy.bind(this) },
         status:  { delay:    0, func: this.status.bind(this) },
         protect: { delay:    0, func: this.toggle_protect.bind(this) },
 
-        main:    { delay:   20, func: Game.ClickCookie },
-        frenzy:  { delay:   20, func: function () { if (Game.clickFrenzy > 0) Game.ClickCookie(); } },
-        season:  { delay: 1000, func: function () { if (Game.seasonPopup.life > 0) Game.seasonPopup.click(); } },
-        gold:    { delay: 1000, func: function () { if (Game.goldenCookie.life > 0 && Game.goldenCookie.wrath == 0) Game.goldenCookie.click(); } },
+        main:    { delay:   10, func: Game.ClickCookie },
+        frenzy:  { delay:   10, func: function () { if (Game.clickFrenzy > 0) Game.ClickCookie(); } },
+        season:  { delay:  500, func: function () { if (Game.seasonPopup.life > 0) Game.seasonPopup.click(); } },
+        gold:    { delay:  500, func: function () { if (Game.goldenCookie.life > 0 && Game.goldenCookie.wrath == 0) Game.goldenCookie.click(); } },
         gnotify: { delay: 1000, func: function () { if (Game.goldenCookie.life > 0 && Game.goldenCookie.wrath == 0) this.play(); }.bind(this.notify) },
     };
 
