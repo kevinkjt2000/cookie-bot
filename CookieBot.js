@@ -95,7 +95,7 @@ Controller.prototype = {
             Game.Ticker = msg;
             Game.TickerAge = 10 * Game.fps;
         } else {
-            Game.Popup(msg);
+            Game.Notify('Info', msg, [19,7]);
         }
     },
 
