@@ -75,7 +75,7 @@ function Controller () {
         timeouts: { },
 
         guard:   { delay: 1000, func: this.guard.bind(this) },
-        autobuy: { delay:   25, func: this.autobuy.bind(this) },
+        autobuy: { delay:  100, func: this.autobuy.bind(this) },
         oneshot: { delay:    0, func: this.autobuy.bind(this) },
         status:  { delay:    0, func: this.status.bind(this) },
         protect: { delay:    0, func: this.toggle_protect.bind(this) },
