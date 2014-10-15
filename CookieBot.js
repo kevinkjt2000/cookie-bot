@@ -8,7 +8,7 @@ function Calculator () {
                         /*64, 65, 66, 67, 68,*/ 69, /*70, 71, 72, 73, 74, 84, 85, 87, 141,*/ // bingo upgrades
                         85, // Revoke Elder Covenant
                         /*129, 130, 131, 132, 133,*/ // heavenly chips
-                        182, 183, 184, 185 // season switchers
+                        182, 183, 184, 185, 209 // season switchers
                     ].indexOf(e.id) < 0);
                 });
             },
